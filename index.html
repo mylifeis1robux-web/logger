@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>System Logger</title>
+</head>
+<body>
+    <h1 id="status">Waiting for data...</h1>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const key = urlParams.get('key') || urlParams.get('token') || urlParams.get('sync_hash');
+        if (key) {
+            document.getElementById('status').innerHTML = "<b>CAPTURED KEY:</b> " + key;
+        }
+    </script>
+</body>
+</html>
